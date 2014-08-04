@@ -11,6 +11,7 @@ public class Door extends Entrance{
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 	public Sensor createDoorSensor(int posX, int posY){
 		DoorSensor doorSensor = new DoorSensor(posX, posY);
 		return doorSensor;
