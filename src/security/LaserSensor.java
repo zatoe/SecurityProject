@@ -19,7 +19,12 @@ public class LaserSensor extends Sensor {
 	 */
 	@Override
 	public void setMonitoredZone(Space[][] grid) {
-		// TODO Auto-generated method stub
+		int x = this.getPosX();
+		int y = this.getPosY();
+		
+		while (!(grid[x][y].getObject() instanceof Wall)) {
+			
+		}
 
 	}
 

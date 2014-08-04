@@ -33,13 +33,18 @@ public class Museum {
 	 * @param o The museum object to put into the grid
 	 */
 	public void place(MuseumObject o) {
+		Space s = grid[o.getPosX()][o.getPosY()];
 		if (o instanceof Intruder) {
 			placeIntruder((Intruder) o);
-		} else if (grid[o.getPosX()][o.getPosY()].isEmpty()) {
-			grid[o.getPosX()][o.getPosY()].setObject(o);
+		
+		} else if (o instanceof Entrance) {
+			placeEntrance((Entrance) o);
+		} else if (s.isEmpty()) {
+			s.setObject(o);
 			if (o instanceof Sensor) {
 				((Sensor) o).setMonitoredZone(grid);
 			}
+			
 		} else {
 			System.out.println("Space is not free");
 		}
@@ -51,6 +56,15 @@ public class Museum {
 			soundAlarm();
 		} else {
 			System.out.println("Intruder is hidden.");
+		}
+	}
+	
+	private void placeEntrance(Entrance e) {
+		MuseumObject o = grid[e.getPosX()][e.getPosY()].getObject();
+		if (o instanceof Wall) {
+			((Wall) o).setEntrance(e);
+		} else {
+			System.out.println("Entrance requires a wall to be placed in.");
 		}
 	}
 	
