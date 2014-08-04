@@ -62,7 +62,12 @@ public class Museum {
 	private void placeEntrance(Entrance e) {
 		MuseumObject o = grid[e.getPosX()][e.getPosY()].getObject();
 		if (o instanceof Wall) {
-			((Wall) o).setEntrance(e);
+			if (((Wall) o).getEntrance() == null) {
+				((Wall) o).setEntrance(e);
+			} else {
+				System.out.println("There is alread an entrance on this section.");
+			}
+			
 		} else {
 			System.out.println("Entrance requires a wall to be placed in.");
 		}
