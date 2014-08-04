@@ -46,7 +46,7 @@ public class Museum {
 		
 	}
 	
-	public void placeIntruder(Intruder i) {
+	private void placeIntruder(Intruder i) {
 		if (grid[i.getPosX()][i.getPosY()].isMonitored()) {
 			soundAlarm();
 		} 
