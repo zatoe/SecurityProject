@@ -8,12 +8,12 @@ package security;
  *
  */
 public class Intruder extends MuseumObject {
+	private boolean detected = false;
+	
 	public Intruder(int posX, int posY) {
 		super(posX, posY);
 		// TODO Auto-generated constructor stub
 	}
-
-	private boolean detected = false;
 	
 	public void disable(Sensor s) {
 		s.setDisabled(true);

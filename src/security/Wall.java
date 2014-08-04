@@ -8,12 +8,12 @@ package security;
  *
  */
 public class Wall extends MuseumObject {
+	private Entrance entrance;
+	
 	public Wall(int posX, int posY) {
 		super(posX, posY);
 		// TODO Auto-generated constructor stub
 	}
-
-	private Entrance entrance;
 	
 	/**
 	 * @return the entrance

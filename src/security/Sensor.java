@@ -8,13 +8,13 @@ package security;
  *
  */
 public abstract class Sensor extends MuseumObject {
+	private boolean intruderDetected;
+	private boolean disabled = false;
+	
 	public Sensor(int posX, int posY) {
 		super(posX, posY);
 		// TODO Auto-generated constructor stub
 	}
-
-	private boolean intruderDetected;
-	private boolean disabled = false;
 	
 	public abstract void setMonitoredZone(Space[][] grid);
 	
