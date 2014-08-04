@@ -39,6 +39,8 @@ public class Museum {
 			grid[o.getPosX()][o.getPosY()].setObject(o);
 			if (o instanceof Sensor) {
 				((Sensor) o).setMonitoredZone(grid);
+			} else if (o instanceof Door){
+				placeEntrance((Door)o);
 			}
 		} else {
 			System.out.println("Space is not free");
@@ -46,10 +48,16 @@ public class Museum {
 		
 	}
 	
+	private void placeEntrance(Door d){
+			
+	}
+	
 	public void placeIntruder(Intruder i) {
 		if (grid[i.getPosX()][i.getPosY()].isMonitored()) {
 			soundAlarm();
-		} 
+		} else {
+			grid[i.getPosX()][i.getPosY()].setObject(i);
+		}
 	}
 	
 	private void soundAlarm() {
