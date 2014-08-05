@@ -27,7 +27,6 @@ public class Museum {
 		fillGrid();
 	}
 	
-	
 	/**
 	 * Function to add an MuseumObject to the grid
 	 * @param o The museum object to put into the grid
@@ -46,14 +45,17 @@ public class Museum {
 			}
 			
 		} else {
-			System.out.println("Space is not free");
+			System.out.println("Space is not free Object: ");
 		}
 		
 	}
 	
 	private void placeIntruder(Intruder i) {
-		if (grid[i.getPosX()][i.getPosY()].isMonitored()) {
-			soundAlarm();
+		Space s = grid[i.getPosX()][i.getPosY()];
+		if (s.getObject() instanceof Wall) {
+			System.out.println("Cannot place intruder inside of a wall.");
+		} else if (s.isMonitored()) {
+			soundAlarm(i.getPosX(), i.getPosY());
 		} else {
 			System.out.println("Intruder is hidden.");
 		}
@@ -64,6 +66,7 @@ public class Museum {
 		if (o instanceof Wall) {
 			if (((Wall) o).getEntrance() == null) {
 				((Wall) o).setEntrance(e);
+				
 			} else {
 				System.out.println("There is alread an entrance on this section.");
 			}
@@ -73,31 +76,66 @@ public class Museum {
 		}
 	}
 	
-	private void soundAlarm() {
-		System.out.println("The alarm has been sounded!");
+	public static void soundAlarm(int x, int y) {
+		System.out.println("The alarm has been sounded at coordinates " + x + ", " + y + "!");
 	}
 	
 	private void fillGrid() {
 		for (int i = 0; i < sizeX; i++) {
-			Arrays.fill(grid[i], new Space());
+			for (int j = 0; j < sizeY; j++) {
+				grid[i][j] = new Space();
+			}
 		}
 	}
 	
 	public void createSquareWall() {
 		//create horizontal walls (WEST to EAST)
 		for (int i = 0; i < sizeY; i++) {
-			MuseumObject w1 = new Wall(i, 0);
-			this.place(w1);
-			MuseumObject w2 = new Wall(i, sizeY - 1);
-			this.place(w2);
+			place(new Wall(0, i));
+			place(new Wall(sizeX - 1, i));
+			
 		}
 		
 		//create "vertical" walls (NORTH to SOUTH);
+		for (int i = 1; i < sizeX - 1; i++) {
+			place(new Wall(i, 0));
+			place(new Wall(i, sizeY - 1));
+			
+		}
+	}
+	
+	public void placeCameras() {
+		for (int i = 1; i < sizeX - 1; i += 5) {
+			for (int j = 1; j < sizeY - 1; j += 5) {
+				place(new Camera(i, j));
+			}
+		}
+	}
+	
+	public void printGrid() {
 		for (int i = 0; i < sizeX; i++) {
-			MuseumObject w1 = new Wall(0, i);
-			this.place(w1);
-			MuseumObject w2 = new Wall(sizeX - 1, i);
-			this.place(w2);
+			for (int j = 0; j < sizeY; j++) {
+				char c = 'E';
+				MuseumObject o = grid[i][j].getObject();
+				
+				if (o instanceof Wall) {
+					if (((Wall) o).getEntrance() instanceof Door) {
+						c = 'D';
+					} else if (((Wall) o).getEntrance() instanceof Window) {
+						c = 'w';
+					} else {
+						c = 'W';
+					}
+				} else if (o instanceof Camera) {
+					c = 'C';
+				} else if (grid[i][j].isMonitored()) {
+					c = 'M';
+				} else {
+					c = 'E';
+				}
+				System.out.print(c + " ");
+			}
+			System.out.println();
 		}
 	}
 }
