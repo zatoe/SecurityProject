@@ -111,6 +111,10 @@ public class Museum {
 				place(new Camera(i, j));
 			}
 		}
+		//bottom right corner
+		place(new Camera(sizeX - 2, sizeY - 2));
+		//top right corner
+		place(new Camera(1, sizeY - 2));
 	}
 	
 	public void printGrid() {
