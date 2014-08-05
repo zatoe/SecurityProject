@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Sensor class that models a camer with omnidirectional view
  */
 public class Camera extends Sensor {
 	private static int distance = 10;
@@ -19,6 +19,7 @@ public class Camera extends Sensor {
 	 */
 	@Override
 	public void setMonitoredZone(Space[][] grid) {
+		//Sets all squares in a circle surround the camera to monitored
 		int diameter = distance * 2 + 1;
 		int y = this.getPosY() - distance;
 		

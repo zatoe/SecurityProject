@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Class to model an Entrance to a room
  */
 public abstract class Entrance extends MuseumObject {
 	private boolean open;

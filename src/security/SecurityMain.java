@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * @author Zatoe
- *
+ * Main method of the application
  */
 public class SecurityMain {
 

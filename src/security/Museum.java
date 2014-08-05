@@ -1,14 +1,12 @@
 package security;
 
-import java.util.Arrays;
-
 /**
  * 
  */
 
 /**
  * @author Zatoe
- *
+ * Class for the actual room objects are placed
  */
 public class Museum {
 	private int sizeX;
@@ -50,6 +48,11 @@ public class Museum {
 		
 	}
 	
+	/**
+	 * Function to handle if an Intruder is detected when placed at a given location
+	 * Also checks to make sure it is a valid space
+	 * @param i Intruder to add
+	 */
 	private void placeIntruder(Intruder i) {
 		Space s = grid[i.getPosX()][i.getPosY()];
 		if (s.getObject() instanceof Wall) {
@@ -61,7 +64,12 @@ public class Museum {
 		}
 	}
 	
+	/**
+	 * Function to handle placing entrance objects into the room
+	 * @param e Entrance to place
+	 */
 	private void placeEntrance(Entrance e) {
+		//Check to make sure the space entrance is being added is a wall
 		MuseumObject o = grid[e.getPosX()][e.getPosY()].getObject();
 		if (o instanceof Wall) {
 			if (((Wall) o).getEntrance() == null) {
@@ -76,10 +84,18 @@ public class Museum {
 		}
 	}
 	
+	/**
+	 * Function to sound the alarm
+	 * @param x the x-coord alarm was triggered
+	 * @param y the y-coord alarm was triggered
+	 */
 	public static void soundAlarm(int x, int y) {
 		System.out.println("The alarm has been sounded at coordinates " + x + ", " + y + "!");
 	}
 	
+	/**
+	 * Function that fills the grid with empty spaces
+	 */
 	private void fillGrid() {
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {
@@ -88,6 +104,9 @@ public class Museum {
 		}
 	}
 	
+	/**
+	 * Function to create a wall around the room
+	 */
 	public void createSquareWall() {
 		//create horizontal walls (WEST to EAST)
 		for (int i = 0; i < sizeY; i++) {
@@ -104,6 +123,10 @@ public class Museum {
 		}
 	}
 	
+	/**
+	 * Function to dynamically place cameras throughout the room
+	 * WARNING: May not thourghly secure room
+	 */
 	public void placeCameras() {
 		int d = Camera.getDistance();
 		for (int i = 1; i < sizeX - 1; i += d) {
@@ -117,6 +140,15 @@ public class Museum {
 		place(new Camera(1, sizeY - 2));
 	}
 	
+	/**
+	 * Method to print the layout of the room
+	 * W = Wall
+	 * w = Window
+	 * D = Door
+	 * M = space is monitored by a sensor
+	 * C = Camera
+	 * E = unmonitored space
+	 */
 	public void printGrid() {
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {

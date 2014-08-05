@@ -1,5 +1,9 @@
 package security;
-
+/**
+ * @author Hipshot
+ * @author Zatoe
+ * Class to model a sensor for a window
+ */
 public class WindowSensor extends Sensor {
 
 	public WindowSensor(int posX, int posY) {

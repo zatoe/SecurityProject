@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Base class to model various sensors on
  */
 public abstract class Sensor extends MuseumObject {
 	private boolean intruderDetected;
@@ -16,6 +16,10 @@ public abstract class Sensor extends MuseumObject {
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * Abstract method to implement what spaces in a room the sensor is monitoring
+	 * @param grid
+	 */
 	public abstract void setMonitoredZone(Space[][] grid);
 	
 	/**

@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Class to serve as a place to hold Entrances
  */
 public class Wall extends MuseumObject {
 	private Entrance entrance;

@@ -5,6 +5,7 @@ package security;
 
 /**
  * @author Zatoe
+ * Base class for all placeable objects within a grid
  *
  */
 public abstract class MuseumObject {

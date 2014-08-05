@@ -2,7 +2,8 @@ package security;
 
 /**
  * @author Hipshot
- *
+ * @author Zatoe
+ * Class to model a door entrance to a room
  */
 public class Door extends Entrance{
 

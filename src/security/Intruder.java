@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Class to model an intruder entering the room
  */
 public class Intruder extends MuseumObject {
 	

@@ -5,7 +5,7 @@ package security;
 
 /**
  * @author Zatoe
- *
+ * Class that models units a room is made of and hold their various properties
  */
 public class Space {
 	private boolean empty;
@@ -33,14 +33,14 @@ public class Space {
 	}
 
 	/**
-	 * @return the detected
+	 * @return the monitored
 	 */
 	public boolean isMonitored() {
 		return monitored;
 	}
 
 	/**
-	 * @param detected the detected to set
+	 * @param monitored the monitored to set
 	 */
 	public void setMonitored(boolean monitored) {
 		this.monitored = monitored;
