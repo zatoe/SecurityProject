@@ -105,8 +105,9 @@ public class Museum {
 	}
 	
 	public void placeCameras() {
-		for (int i = 1; i < sizeX - 1; i += 5) {
-			for (int j = 1; j < sizeY - 1; j += 5) {
+		int d = Camera.getDistance();
+		for (int i = 1; i < sizeX - 1; i += d) {
+			for (int j = 1; j < sizeY - 1; j += d) {
 				place(new Camera(i, j));
 			}
 		}

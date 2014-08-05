@@ -23,9 +23,12 @@ public class SecurityMain {
 		MuseumObject c3 = new Camera(16, 30);
 		Entrance d1 = new Door(sizeX - 1, sizeY/2);
 		Entrance w1 = new Window(sizeX - 1, 10);
-		
+		Entrance[] windows = new Window[sizeY / 3];
+		int index = 0;
 		for (int i = 3; i < sizeX; i += 3) {
-			m.place(new Window(0, i));
+			windows[index] = new Window(0, i);
+			m.place(windows[index]);
+			index++;
 		}
 		
 		MuseumObject i1 = new Intruder(2, 4);
@@ -43,6 +46,7 @@ public class SecurityMain {
 		m.place(i2);
 		m.place(i3);
 		
+		windows[3].setOpen(true);
 		d1.setOpen(true);
 		w1.setOpen(true);
 		

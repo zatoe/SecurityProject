@@ -8,11 +8,10 @@ package security;
  *
  */
 public class Camera extends Sensor {
-	private int distance;
+	private static int distance = 10;
 	
 	public Camera(int posX, int posY) {
 		super(posX, posY);
-		distance = 4;
 	}
 
 	/* (non-Javadoc)
@@ -55,5 +54,21 @@ public class Camera extends Sensor {
 			startY++;
 		}
 	}
+
+	/**
+	 * @return the distance
+	 */
+	public static int getDistance() {
+		return distance;
+	}
+
+	/**
+	 * @param distance the distance to set
+	 */
+	public static void setDistance(int distance) {
+		Camera.distance = distance;
+	}
+	
+	
 
 }
