@@ -2,7 +2,7 @@ package security;
 /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Class to model a sensor for a window

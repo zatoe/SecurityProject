@@ -7,7 +7,7 @@ package security;
 /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Class for the actual room objects are placed

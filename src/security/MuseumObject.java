@@ -6,7 +6,7 @@ package security;
  /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Base class for all placeable objects within a grid

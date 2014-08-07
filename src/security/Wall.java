@@ -6,7 +6,7 @@ package security;
 /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Class to serve as a place to hold Entrances

@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Main method of the application

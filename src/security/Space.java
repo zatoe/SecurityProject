@@ -6,7 +6,7 @@ package security;
 /**
  * @author William Zielke
  * @author Donald Nardi
- * @author Aarani Permachandra
+ * @author Aarani Premachandra
  * @title Museum Simulation
  * 
  * Class that models units a room is made of and hold their various properties
