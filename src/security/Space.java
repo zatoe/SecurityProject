@@ -4,7 +4,11 @@
 package security;
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class that models units a room is made of and hold their various properties
  */
 public class Space {

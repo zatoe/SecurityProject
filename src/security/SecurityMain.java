@@ -4,9 +4,14 @@
 package security;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Main method of the application
  */
 public class SecurityMain {
@@ -50,9 +55,7 @@ public class SecurityMain {
 		windows.get(3).setOpen(true);
 		d1.setOpen(true);
 		w1.setOpen(true);
-		
-		
-		
+			
 	}
 
 }

@@ -5,7 +5,11 @@ package security;
  */
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class for the actual room objects are placed
  */
 public class Museum {

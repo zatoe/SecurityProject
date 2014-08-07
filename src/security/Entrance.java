@@ -4,7 +4,11 @@
 package security;
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class to model an Entrance to a room
  */
 public abstract class Entrance extends MuseumObject {

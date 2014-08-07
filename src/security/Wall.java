@@ -4,7 +4,11 @@
 package security;
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class to serve as a place to hold Entrances
  */
 public class Wall extends MuseumObject {

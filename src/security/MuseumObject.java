@@ -3,10 +3,13 @@ package security;
  * 
  */
 
-/**
- * @author Zatoe
+ /**
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Base class for all placeable objects within a grid
- *
  */
 public abstract class MuseumObject {
 	private int posX;

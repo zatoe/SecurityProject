@@ -4,7 +4,11 @@
 package security;
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Sensor class that models a camer with omnidirectional view
  */
 public class Camera extends Sensor {

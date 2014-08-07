@@ -4,7 +4,11 @@ package security;
  */
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Base class to model various sensors on
  */
 public abstract class Sensor extends MuseumObject {

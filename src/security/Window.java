@@ -1,8 +1,11 @@
 package security;
 
 /**
- * @author Hipshot
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class to model a window entrance
  */
 public class Window extends Entrance {

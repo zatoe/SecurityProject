@@ -4,7 +4,11 @@ package security;
  */
 
 /**
- * @author Zatoe
+ * @author William Zielke
+ * @author Donald Nardi
+ * @author Aarani Permachandra
+ * @title Museum Simulation
+ * 
  * Class to model an intruder entering the room
  */
 public class Intruder extends MuseumObject {
